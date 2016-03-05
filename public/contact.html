@@ -1,0 +1,17 @@
+<form name="contactform" validation>
+  <!-- ime -->
+  <div class="row">
+    <input type="text" name="name" data-ng-model="contactData.name" placeholder="Your full name"
+    required>
+  </div>
+  <div class="row">
+    <input type="email" name="name" data-ng-model="contactData.email" placeholder="Your email"
+    data-ng-minlength="6" required>
+  </div>
+  <div class="row">
+    <textarea class="message" id="message" data-ng-model="contactData.message" placeholder="Please type in your message"
+    data-ng-minlength="4">
+  </div>
+ <div class="row">
+   <input type="submit" data-ng-disabled="submitButtonDisabled" data-ng-click="submitContactForm()" />
+</form>

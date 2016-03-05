@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="ourApp">
+<head>
+  <title>We're back baby</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><!-- load jquery -->
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script><!-- load angular -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script><!-- load ui-router-->
+   <script src="core.js"></script>
+   <script src="/stylesheets/style.css" type="text/css"></script>
+</head>
+
+<body >
+  <div class="header">   <!-- header -->
+    <a class='logolink' href="#"><img class='logotop' src='img/logo.png'></img></a>
+  </div>
+  <div class="bigpic">
+    <div class="widepic">
+      <div class="hello">
+          <span class="welcometext"> Welcome to </span>
+          <span class="green"> Archwell </span>
+      </div></div></div>
+
+
+
+  <div class="row">       <!-- deo za CV -->
+   <div class="col-md-6 col-md-offset-3">
+     <ui-view></ui-view>
+   </div>
+ </div>
+
+ <div class="contactform">
+   <a ui-sref="contact">Click here to contact us!</a>
+
+
+ </div>
+
+   <script type="text/ng-template" id="/home.html">
+     <div class="page-header">
+       <h1>Archwell news baby</h1>
+     </div>
+
+    <!-- rest of template -->
+   </script>
+</body>
+</html>
