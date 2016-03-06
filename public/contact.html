@@ -1,17 +1,28 @@
-<form name="contactform" validation>
+    <p class="pl0x"> Please insert the following:</p>
+
+<form name="contactform" validation ng-submit="addMsg()">
   <!-- ime -->
   <div class="row">
-    <input type="text" name="name" data-ng-model="contactData.name" placeholder="Your full name"
-    required>
+    <input type="text" name="name" ng-model="user.name" placeholder="Your full name"
+    required />
+    <span class="formerror" ng-show="contactform.name.$error.required">Your name and surname are required </span>
+  </div>
+  <!--email -->
+  <div class="row">
+    <input type="email" name="email" ng-model="user.email" placeholder="Your email"
+    data-ng-minlength="6" required />
+    <span class="formerror" ng-show="contactform.email.$error.required"> Your email address is required </span>
+    <span class="formerror" ng-show="contactform.email.$error.email"> That's not an email address. </span>
+  </div>
+  <!-- poruka -->
+  <div class="row">
+    <textarea class="message" id="message" ng-model="user.message" ng-show="contactform.email.$valid" placeholder="Please type in your message"
+    data-ng-minlength="4"></textarea>
   </div>
   <div class="row">
-    <input type="email" name="name" data-ng-model="contactData.email" placeholder="Your email"
-    data-ng-minlength="6" required>
-  </div>
-  <div class="row">
-    <textarea class="message" id="message" data-ng-model="contactData.message" placeholder="Please type in your message"
-    data-ng-minlength="4">
-  </div>
+   <button type="submit" ng-disabled="contactform.$invalid"> Reach us! </button>
+ </div>
  <div class="row">
-   <input type="submit" data-ng-disabled="submitButtonDisabled" data-ng-click="submitContactForm()" />
+<!-- mesto za response, don't touch -->
+ </div>
 </form>

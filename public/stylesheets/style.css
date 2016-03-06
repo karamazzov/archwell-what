@@ -1,10 +1,18 @@
 
-.body {
+body {
   margin:0;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-
+  font-family: 'Titillium Web', sans-serif;
 }
 
+/** angular stajl **/
+input.ng-invalid{border:1px solid red;}
+.formerror{
+  color:red;
+  font-size:14px;
+  float:right;
+  position:absolute;
+  padding-left:10px;
+}
 .kurwa {
   color: blue;
   background-color: red;
@@ -49,10 +57,11 @@ position:relative;
     position:absolute;
     background-image:url('/img/pozadina.jpg');
     background-repeat:repeat-xy;
-    opacity:0.3;
+    opacity:0.2;
     z-index:-1;
 }
 .hello{
+    display:block;
     text-align:center;
     position:relative;
     opacity:1;
@@ -70,6 +79,7 @@ position:relative;
 .green{
     color:green;
     text-shadow:2px black;
+    opacity:1;
 }
 /**CV part **/
 .cvpart{
@@ -96,29 +106,62 @@ position:relative;
 .col > p{
   text-align:center;
 }
+/** kontakt bejbe **/
+.linkbtn{
+  width:300px;
+  height:50px;
+  font-size:20px;
+  border:none;
 
-/** ai part **/
-#ai{
-    width:100%;
-    height:auto;
-    text-align:center;
-    background-color:darkgrey;
-    position:relative;
-    padding-bottom:80px;
 }
-#ai p{
-    font-size:24px;
-    color:black;
-    padding-top:200px;
-}
-#ai img{
-    width:300px;
-    height:300px;
-    border-radius:150px;
-    padding-bottom:20px;
-}
+.contactform{
+  margin-top:50px;
+  margin-bottom:50px;
+  text-align:center;
 
-
+}
+.contactform > a{
+  color:Green;
+}
+input{
+height:30px;
+width:250px;
+font-size:20px;
+border:1px solid green;
+}
+textarea{
+  height:100px;
+  width:250px;
+  font-size:16;
+  border:2px solid green;
+}
+.row{
+  padding-top:7px;
+  background-image:
+}
+.pl0x{
+  text-align:center;
+  color:Green;
+  font-size:24px;
+}
+button{
+  text-align:center;
+  float:center;
+  height:50px;
+  width:100px;
+  position:relative;
+  font-size:17px;
+  background-image:url('/img/pozadina.jpg');
+  background-repeat:repeat-xy;
+  background-size:0.05;
+  border-color:green;
+  color:white;
+}
+.response{
+  color:black;
+  opacity:0.8;
+  font-size:20;
+}
 /** footer **/
 .footer{
     height:60px;
@@ -131,39 +174,24 @@ position:relative;
     left:0;
     box-shadow: 0px -2px 5px 0px black;
 }
-.footer > img{
+.footertext{
+  margin:0px;
+  float:right;
+  padding-top:20px;
+  padding-right:10px;
+}
+.footer > a{
 width:50px;
 height:auto;
 position:relative;
 margin:0 auto;
 display:block;
-padding-top:10px;
 height:auto;
 width:50px;
 text-align:center;
 }
-
-
-/** na kraju stranice **/
-#bottom{
-    height:auto;
-    background-color:rgba(0, 153, 0, 0.6);
-    margin-bottom:0px;
-}
-#tacka{
-    size:60px;
-}
-#donate{
-    text-align:center;
-    font-size:50px;
-    color:rgb(77,77,77);
-    padding-top:30px;
-    margin-top:0px;
-}
-#dontext{
-    color:rgb(77,77,77);
-    padding-top:20px;
-    text-align:center;
-    margin-bottom:0px;
-    padding-bottom:20px;
+.gitlogo{
+  width:50px;
+  height:auto;
+  padding-top:5px;
 }
