@@ -84,14 +84,19 @@ position:relative;
     text-align:center;
     margin:0;
 }
-.cvpart img{
+.col > img{
     height:300px;
     width:300px;
+
 }
 .col{
     float:left;
     width:33%;
 }
+.col > p{
+  text-align:center;
+}
+
 /** ai part **/
 #ai{
     width:100%;
@@ -115,7 +120,7 @@ position:relative;
 
 
 /** footer **/
-#footer{
+.footer{
     height:60px;
     position:relative;
     background-color:white;
@@ -126,44 +131,19 @@ position:relative;
     left:0;
     box-shadow: 0px -2px 5px 0px black;
 }
-#logo{
+.footer > img{
 width:50px;
 height:auto;
-}
-#footertext{
-    color:black;
-    font-family: 'Molle', cursive;
-    font-size:14px;
-    float:right;
-    bottom:0px;
-    margin:0;
-    padding-bottom:5px;
-    padding-top:35px;
-    padding-right:10px;
-
-}
-#copyright{
-    color:black;
-    font-family: 'Molle',cursive;
-    font-size:14px;
-    float:right;
-    padding-right:2px;
-    bottom:0px;
-    margin:0;
-    padding-bottom:5px;
-    padding-top:35px;
-    padding-right:10px;
-}
-#gitlink{
-text-align:center;
-width:50px;
-height:auto;
-bottom:0px;
-padding-top:10px;
-display:block;
-margin: 0 auto;
 position:relative;
+margin:0 auto;
+display:block;
+padding-top:10px;
+height:auto;
+width:50px;
+text-align:center;
 }
+
+
 /** na kraju stranice **/
 #bottom{
     height:auto;
