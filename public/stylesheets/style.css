@@ -162,6 +162,12 @@ button{
   opacity:0.8;
   font-size:20;
 }
+.sentplane{
+  text-align:center;
+  height:200px;
+  width:auto;
+
+}
 /** footer **/
 .footer{
     height:60px;

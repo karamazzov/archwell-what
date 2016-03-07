@@ -10,7 +10,7 @@
   <!--email -->
   <div class="row">
     <input type="email" name="email" ng-model="user.email" placeholder="Your email"
-    data-ng-minlength="6" required /> 
+    data-ng-minlength="6" required />
     <span class="formerror" ng-show="contactform.email.$error.required"> Your email address is required </span>
     <span class="formerror" ng-show="contactform.email.$error.email"> That's not an email address. </span>
   </div>
@@ -20,9 +20,14 @@
     data-ng-minlength="4"></textarea>
   </div>
   <div class="row">
-   <button type="submit" ng-disabled="contactform.$invalid"> Reach us! </button>
+   <button type="submit" ng-disabled="contactform.$invalid" ng-click="ShowThanks()"> Reach us! </button>
  </div>
  <div class="row">
 <!-- mesto za response, don't touch -->
+ </div>
+
+ <div ng-show="ThankYou">
+   <h2> Your message has been sent, {{user.name}} </h2>
+   <img class="sentplane" src="/img/sent.png"></img>
  </div>
 </form>

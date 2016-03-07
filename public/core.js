@@ -31,6 +31,7 @@ ourApp.controller('mainController', ['$scope', '$http',
    };
 
 
+
 }]);
 
 ourApp.controller('contactController', ['$scope', '$http',
@@ -41,12 +42,19 @@ ourApp.controller('contactController', ['$scope', '$http',
        name: $scope.user.name,
        email: $scope.user.email,
        message: $scope.user.message,
+       sent:true,
 
      });
    };
+   $scope.ThankYou = false;
+   $scope.ShowThanks = function() {
+     $scope.ThankYou = $scope.ThankYou ?
+     false : true;
+   };
 
 
+   $scope.messages = [
 
-   $scope.messages = [];
+   ];
 
 }]);
