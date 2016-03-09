@@ -15,6 +15,11 @@ ourApp.config([  //quite self-explanatory
         url: '/contact',
         templateUrl: 'contact.html',
         controller: 'contactController'
+      })
+      .state('triangle',{
+        url: '/thanks',
+        templateUrl: 'thanks.html',
+        controller: 'trinity'
       });
 
 
@@ -26,15 +31,6 @@ ourApp.config([  //quite self-explanatory
 
 ourApp.controller('mainController', ['$scope', '$http',
  function($scope, $http) {
-
-   $scope.showTriangle = function(){
-     $scope.thanksvis = true;
-   };
-
-   $scope.hideTriangle = function(){
-     $scope.thanksvis = false;
-   };
-
 
 
 }]);
@@ -62,5 +58,13 @@ ourApp.controller('contactController', ['$scope', '$http',
    $scope.messages = [
 
    ];
+
+
+}]);
+
+ourApp.controller('trinity', ['$scope', '$http',
+function($scope, $http) {
+
+
 
 }]);
