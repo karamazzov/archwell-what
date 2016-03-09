@@ -88,24 +88,48 @@ position:relative;
     height:500px;
     text-align:center;
 }
+.triangle{
+	width: 0;
+	height: 0;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-bottom: 50px solid lightgray;
+  margin:0 auto;
+}
+.triangle:hover {
+  transform: rotate(180deg);
+  border-bottom:50px solid lightgreen;
+}
+.rotate{
+  transition: all 0.5s ease-in-out;
+}
+.rotate:hover {
+  transition: all 1s ease-in-out;
+}
 .cvbanner{
     font-size:40px;
     color:green;
     text-align:center;
     margin:0;
 }
-.col > img{
+.cvimg{
     height:300px;
     width:300px;
-
 }
 .col{
     float:left;
     width:33%;
+    text-align:center;
 }
 .col > p{
   text-align:center;
+  padding-left:50px;
 }
+.logopic{
+  width:70px;
+  height:auto;
+}
+
 /** kontakt bejbe **/
 .linkbtn{
   width:300px;
@@ -168,6 +192,20 @@ button{
   width:auto;
 
 }
+/** popup **/
+.thanks div{
+  display:inline-block;
+  width:24%;
+  text-align:center;
+}
+.thanks img{
+  width:200px;
+  height:auto;
+}
+.thanks h2{
+  text-align:center;
+}
+
 /** footer **/
 .footer{
     height:60px;

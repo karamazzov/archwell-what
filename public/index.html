@@ -5,12 +5,13 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script><!-- load angular -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><!-- load jquery -->
    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script><!-- load ui-router-->
+   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script><!-- load angularanimationz-->
    <script src="core.js"></script>
    <link href='https://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
    <link href="/stylesheets/style.css" type="text/css" rel="stylesheet"></script>
 </head>
 
-<body >
+<body ng-app="animateApp">
   <div class="header">   <!-- header -->
     <a class='logolink' href="#"><img class='logotop' src='img/logo.png'></img></a>
   </div>
@@ -20,30 +21,56 @@
           <span class="welcometext"> Welcome to </span>
           <span class="green"> Archwell </span>
       </div></div>
-  <div clas="cvpart">
+  <div class="cvpart">
     <p class="cvbanner">About us</p>
     <div class="col">
-      <img src="/img/perica.jpg"></img>
-      <p> 2orthodox4me </p>
+      <img class="cvimg" src="/img/perica.jpg"></img>
+      <h2> Petar Matko </h2>
+      <h3> "The peasant" </h3>
+      <img class="logopic" src="/img/db.png"></img>
+      <p> Behold, I am coming quickly, and My reward is with Me, to render to every man according to what he has done. </p>
       </div>
     <div class="col">
       <img class="cvimg" src="/img/architect.gif"></img>
-      <p> 2Illuminati4me </p>
+      <h2> Milan Velebit </h2>
+      <h3> "The Architect"</h3>
+      <img class="logopic" src="/img/zippouno.png"></img>
+      <p> I am the Alpha and the Omega, the first and the last, the beginning and the end. </p>
     </div>
     <div class="col">
-      <img src="/img/fica.png"></img>
-      <p> 2jew4me </p>
+      <img class="cvimg" src="/img/fica.png"></img>
+      <h2> Filip Markovic </h2>
+      <h3> "The Enabler" </h3>
+      <img class="logopic" src="/img/work.png"></img>
+      <p> I am the Alpha and the Omega," says the Lord God, "who is, and who was, and who is to come, the Almighty. </p>
     </div>
   </div>
 
   <div class="contactform">
-   <button class="linkbtn" ui-sref="contact" ng-click="buttonbeGone()">Click here to contact us!</button>
+   <button class="linkbtn" ui-sref="contact">Click here to contact us!</button>
    <ui-view></ui-view>
  </div>
 
-
-
-
+ <div class="triangle rotate" ng-mouseover="showTriangle()" ng-mouseleave="hideTriangle()"></div>
+ <div class="thanks" ng-show="thanksvis">
+   <h2> This website was built using:</h2>
+   <div>
+     <a href="https://angularjs.org/"><img src="/img/angular.png"></img></a>
+     <h2> AngularJS </h2>
+   </div>
+   <div>
+     <a href='https://nodejs.org'><img src="/img/nodejs.png"></img></a>
+     <h2> NodeJS </h2>
+   </div>
+   <div>
+     <a href="https://mongodb.org"><img src="/img/mongodb.png"></img></a>
+     <h2> MongoDB </h2>
+   </div>
+   <div>
+     <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="/img/brain.png"></img></a>
+     <h2> Our magnificent minds </h2>
+   </div>
+ </div>
    <div class="footer">
      <div class="footertext">
      <span>&copy <script>

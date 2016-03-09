@@ -1,4 +1,5 @@
 var ourApp = angular.module('ourApp', ['ui.router']); //dodao ui-router kao dependency nasoj aplikaciji
+var animateApp = angular.module('animateApp', ['ngAnimate']);
 
 ourApp.config([  //quite self-explanatory
   '$stateProvider',
@@ -25,9 +26,13 @@ ourApp.config([  //quite self-explanatory
 
 ourApp.controller('mainController', ['$scope', '$http',
  function($scope, $http) {
-   $scope.buttonbeGone = function(){
-     button.hide=true;
 
+   $scope.showTriangle = function(){
+     $scope.thanksvis = true;
+   };
+
+   $scope.hideTriangle = function(){
+     $scope.thanksvis = false;
    };
 
 
@@ -46,6 +51,7 @@ ourApp.controller('contactController', ['$scope', '$http',
 
      });
    };
+
    $scope.ThankYou = false;
    $scope.ShowThanks = function() {
      $scope.ThankYou = $scope.ThankYou ?
