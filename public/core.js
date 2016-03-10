@@ -20,7 +20,12 @@ ourApp.config([  //quite self-explanatory
         url: '/thanks',
         templateUrl: 'thanks.html',
         controller: 'trinity'
-      });
+      })
+      .state('unleashed', {
+        url: '/networkspread',
+        templateUrl: 'network.html',
+        controller: 'networkController'
+      })
 
 
     $urlRouterProvider.otherwise('home'); //za ostale routove salje isto na home
@@ -68,3 +73,9 @@ function($scope, $http) {
 
 
 }]);
+
+ourApp.controller('networkController', ['$scope,' ,'$http',
+function($scope, $http){
+
+
+}])

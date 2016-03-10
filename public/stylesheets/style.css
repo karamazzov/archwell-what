@@ -239,3 +239,10 @@ text-align:center;
   height:auto;
   padding-top:5px;
 }
+.netlogo{
+  width:50px;
+  height:auto;
+  padding-top:5px;
+  float:right;
+  padding-right:200px;
+}
