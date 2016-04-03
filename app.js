@@ -5,13 +5,15 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var routes = require('./routes/index');
-var users = require('./routes/users');
-
 var app = express();
 
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
+var mongoose = require('mongoose');
+var Mail = require('./public/admin/models/Mail.model');
+
+var db = 'mongodb://localhost:27017/contactdb';
+
+mongoose.connect(db);
+
 app.set('view engine', 'jade');
 
 // uncomment after placing your favicon in /public
@@ -28,20 +30,26 @@ app.use('/users', users);
 */
 
 // API BRUH
-app.get('/api/', function(req, res){
-
-
+app.get('/mails', function(req, res){
+  Mail.find({name:"Petar Matko"})
+  .exec(function(err,mail) {
+    if(err) {
+      res.send('error has ocured');
+    } else {
+      res.json(mail);
+    }
+  })
 });
 
-app.post('/api/', function(req, res){
+app.post('/admin/', function(req, res){
 
 
 });
 
 // ALL PURPOSE ROUTE
-app.get('*', function(req, res){
-   res.sendfile('./public/index.html');
-
+app.get('/mails', function(req, res){
+  res.send('perapro');
+  console.log('alert123');
 });
 
 // catch 404 and forward to error handler
@@ -74,6 +82,5 @@ app.use(function(err, req, res, next) {
     error: {}
   });
 });
-
 
 module.exports = app;

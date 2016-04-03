@@ -40,6 +40,13 @@ ourApp.controller('mainController', ['$scope', '$http',
 
 }]);
 
+ourApp.controller('mainController', ['$scope', '$http',
+ function($scope, $http) {
+  $http.get('home.')
+  $scope.name = "Mikula";
+
+}]);
+
 ourApp.controller('contactController', ['$scope', '$http',
  function($scope, $http) {
 
@@ -66,16 +73,3 @@ ourApp.controller('contactController', ['$scope', '$http',
 
 
 }]);
-
-ourApp.controller('trinity', ['$scope', '$http',
-function($scope, $http) {
-
-
-
-}]);
-
-ourApp.controller('networkController', ['$scope,' ,'$http',
-function($scope, $http){
-
-
-}])
