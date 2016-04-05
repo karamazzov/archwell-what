@@ -8,9 +8,9 @@ var bodyParser = require('body-parser');
 var app = express();
 
 var mongoose = require('mongoose');
-var Mail = require('./public/admin/models/Mail.model');
+var Mail = require('./public/admin/models/mail');
 
-var db = 'mongodb://localhost:27017/contactdb';
+var db = 'mongodb://localhost/contact';
 
 mongoose.connect(db);
 
@@ -23,20 +23,22 @@ app.use(bodyParser.json());
 app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '/public')));
 /*
+
 app.use('/', routes);
 app.use('/users', users);
 */
 
 // API BRUH
 app.get('/mails', function(req, res){
-  Mail.find({name:"Petar Matko"})
-  .exec(function(err,mail) {
+  Mail.find()
+  .exec(function(err, mails) {
     if(err) {
       res.send('error has ocured');
     } else {
-      res.json(mail);
+      res.json(mails);
+      console.log('mailovi su poslati adminu');
     }
   })
 });
@@ -46,11 +48,6 @@ app.post('/admin/', function(req, res){
 
 });
 
-// ALL PURPOSE ROUTE
-app.get('/mails', function(req, res){
-  res.send('perapro');
-  console.log('alert123');
-});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

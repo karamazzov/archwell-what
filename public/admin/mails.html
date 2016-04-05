@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<title></title>
+  <script scr="core.js" type="text/javascript"></script>
+  </head>
+  <body>
+	<div ng-app="myApp">
+	  <div ng-controller="mailController">
+		<div ng-repeat="mail in {{mails}}">
+		  <p>{{mail.name}}</p>
+		  <p>{{mail.email}}</p>
+		  <p>{{mail.content}}</p>
+		</div>
+	  </div>
+	</div>
+  </body>
+</html>

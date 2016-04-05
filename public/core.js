@@ -32,18 +32,15 @@ ourApp.config([  //quite self-explanatory
   }]);
 
 
-
-
 ourApp.controller('mainController', ['$scope', '$http',
  function($scope, $http) {
-
+  $http.get('/home')
+  $scope.name = "Mikula";
 
 }]);
 
-ourApp.controller('mainController', ['$scope', '$http',
- function($scope, $http) {
-  $http.get('home.')
-  $scope.name = "Mikula";
+ourApp.controller('homeController', ['$scope', function($scope) {
+  $scope.name = 'World';
 
 }]);
 
