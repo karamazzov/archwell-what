@@ -37,11 +37,15 @@ app.get('/mails', function(req, res){
     if(err) {
       res.send('error has ocured');
     } else {
-      res.json(mails);
+      res.send(mails);
       console.log('mailovi su poslati adminu');
     }
   })
 });
+
+app.get('/admin/mails', function(req,res) {
+  res.render('/public/admin/mails.html');
+})
 
 app.post('/admin/', function(req, res){
 

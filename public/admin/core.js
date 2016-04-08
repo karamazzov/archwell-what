@@ -1,16 +1,6 @@
-
-var app = angular.module('myApp'); //dodao ui-router kao dependency nasoj aplikaciji
-
-app.controller('mailController', ['$scope', '$http',
- 
-function($scope, $http) {
-
-  $http({
-  	method: 'GET',
-  	url: '/mails'
-  }).
-  then(function (response) {
-  	$scope.mails = response.data;
+var app = angular.module('myApp', []);
+app.controller('mailsCtrl', function($scope, $http) {
+  $http.get("/mails").then(function (response) {
+      $scope.mails = response.data;
   });
-
-}]);
+});
