@@ -43,12 +43,21 @@ app.get('/mails', function(req, res){
   })
 });
 
-app.get('/admin/mails', function(req,res) {
-  res.render('/public/admin/mails.html');
-})
+app.post('/mail', function(req, res){
+  var newMail = new Mail();
 
-app.post('/admin/', function(req, res){
+  newMail.name = req.body.name;
+  newMail.email = req.body.email;
+  newMail.content = req.body.content;
 
+  newMail.save(function(err,mail){
+    if(err){
+      res.send('error saving mail');
+    } else {
+      console.log(mail);
+      res.send(mail);
+    }
+  });
 
 });
 
