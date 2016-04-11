@@ -1,6 +1,6 @@
     <p class="pl0x"> Please insert the following:</p>
 
-<form action="/mail" name="contactform" method="post" validation ng-submit="addMsg()">
+<form action="/mail" name="contactform" method="post" validation ng-submit="addMsg()" class="contactform">
   <!-- ime -->
   <div class="row">
     <input type="text" name="name" ng-model="user.name" placeholder="Your full name"
@@ -20,7 +20,7 @@
     data-ng-minlength="4"></textarea>
   </div>
   <div class="row">
-   <input type="submit" ng-disabled="contactform.$invalid" ng-click="ShowThanks()"> Reach us! </input>
+   <button type="submit" ng-disabled="contactform.$invalid" ng-click="ShowThanks()"> Reach us! </button>
  </div>
  <div class="row">
 <!-- mesto za response, don't touch -->
