@@ -19,7 +19,6 @@ ourApp.config([  //quite self-explanatory
       .state('triangle',{
         url: '/thanks',
         templateUrl: 'thanks.html',
-        controller: 'trinity'
       })
       .state('unleashed', {
         url: '/networkspread',
