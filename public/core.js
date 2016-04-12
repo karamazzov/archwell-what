@@ -39,7 +39,6 @@ ourApp.controller('mainController', ['$scope', '$http',
 }]);
 
 ourApp.controller('homeController', ['$scope', function($scope) {
-  $scope.name = 'World';
 
 }]);
 
