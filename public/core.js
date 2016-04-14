@@ -10,22 +10,28 @@ ourApp.config([  //quite self-explanatory
         url: '/home',  //self-explanatory
         templateUrl: 'home.html', // ovo home.html je zapravo id script taga koji nosi template
         controller: 'mainController'
-      })
+      })  // izbrisati ovo?
       .state('contact', {
-        url: '/contact',
-        templateUrl: 'contact.html',
-        controller: 'contactController'
+        views: {
+          'contact': {
+            url: '/contact',
+            templateUrl: 'contact.html',
+            controller: 'contactController'
+          }
+        }
       })
-      .state('triangle',{
-        url: '/thanks',
-        templateUrl: 'thanks.html',
+      .state('whatwedo1', {
+        url: '/whatwedo1',
+        templateUrl: 'whatwedo1.html'
       })
-      .state('unleashed', {
-        url: '/networkspread',
-        templateUrl: 'network.html',
-        controller: 'networkController'
+      .state('whatwedo2', {
+        url: '/whatwedo2',
+        templateUrl: 'whatwedo2.html'
       })
-
+      .state('whatwedo3', {
+        url: '/whatwedo3',
+        templateUrl: 'whatwedo3.html'
+      })
 
     $urlRouterProvider.otherwise('home'); //za ostale routove salje isto na home
   }]);

@@ -47,9 +47,32 @@
     </div>
   </div>
 
+  <div class="cvpart">
+    <p class="cvbanner">What we do</p>
+    <div class="col">
+      <img ui-sref="whatwedo1" class="cvimg" src="#" alt="slika 1"></img>
+    </div>
+    <div class="col">
+      <img  ui-sref="whatwedo2" class="cvimg" src="#" alt="slika 2"></img>
+    </div>
+    <div class="col">
+      <img  ui-sref="whatwedo1" class="cvimg" src="#" alt="slika 3"></img>
+    </div>
+  </div>
+
+  <div class="What we do display class">
+    <ui-view ="whatwedo"></ui-view> 
+  </div>
+
+  <button ng-model="collapsed2" ng-click="collapsed2=!collapsed2">Our portfolio</button>
+    <div ng-show="collapsed2">
+      Pera pro
+    </div>
+
+
   <div class="contactform">
    <button class="linkbtn" ui-sref="contact">Click here to contact us!</button>
-   <ui-view ="contact"></ui-view>
+   <div ui-view="contact"></div>
   </div>
 
 <div class="triangle rotate"  ng-model="collapsed" ng-click="collapsed=!collapsed"></div>
