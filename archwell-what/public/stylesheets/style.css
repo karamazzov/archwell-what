@@ -1,0 +1,248 @@
+
+body {
+  margin:0;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+/** angular stajl **/
+input.ng-invalid{border:1px solid red;}
+.formerror{
+  color:red;
+  font-size:14px;
+  float:right;
+  position:absolute;
+  padding-left:10px;
+}
+.kurwa {
+  color: blue;
+  background-color: red;
+}
+.header{
+   top:0px;
+   width:100%;
+   position:relative;
+   color:white;
+   height:50px;
+   left:0px;
+   padding:0px auto;
+   box-shadow: 0px 2px 50px 0px black;
+}
+
+
+
+.logotop{
+    height:60px;
+    width:auto;
+}
+.logolink{
+ text-align:center;
+width:60px;
+height:auto;
+top:0px;
+padding-top:0px;
+display:block;
+margin: 0 auto;
+position:relative;
+}
+
+/** content **/
+.bigpic{
+    position:relative;
+    width:100%;
+    height:400px;
+}
+.widepic{
+    width:100%;
+    height:400px;
+    position:absolute;
+    background-image:url('/img/pozadina.jpg');
+    background-repeat:repeat-xy;
+    opacity:0.2;
+    z-index:-1;
+}
+.hello{
+    display:block;
+    text-align:center;
+    position:relative;
+    opacity:1;
+    padding-top:200px;
+    z-index:1;
+    float:center;
+    font-size:60px;
+}
+.welcometext{
+    color:grey;
+    text-shadow: 2px black;
+    opacity:1;
+    margin:0px;
+}
+.green{
+    color:green;
+    text-shadow:2px black;
+    opacity:1;
+}
+/**CV part **/
+.cvpart{
+    position:relative;
+    padding-top:10px;
+    height:500px;
+    text-align:center;
+}
+.triangle{
+	width: 0;
+	height: 0;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-bottom: 50px solid lightgray;
+  margin:0 auto;
+}
+.triangle:active {
+  transform: rotate(180deg);
+  border-bottom:50px solid lightgreen;
+}
+.rotate{
+  transition: all 0.5s ease-in-out;
+}
+.rotate:active {
+  transition: all 0.1s ease-in-out;
+}
+.cvbanner{
+    font-size:40px;
+    color:green;
+    text-align:center;
+    margin:0;
+}
+.cvimg{
+    height:300px;
+    width:300px;
+}
+.col{
+    float:left;
+    width:33%;
+    text-align:center;
+}
+.col > p{
+  text-align:center;
+  padding-left:50px;
+}
+.logopic{
+  width:70px;
+  height:auto;
+}
+
+/** kontakt bejbe **/
+.linkbtn{
+  width:300px;
+  height:50px;
+  font-size:20px;
+  border:none;
+
+}
+.contactform{
+  margin-top:50px;
+  margin-bottom:50px;
+  text-align:center;
+
+}
+.contactform > a{
+  color:Green;
+}
+input{
+height:30px;
+width:250px;
+font-size:20px;
+border:1px solid green;
+}
+textarea{
+  height:100px;
+  width:250px;
+  font-size:16;
+  border:2px solid green;
+}
+.row{
+  padding-top:7px;
+  background-image:
+}
+.pl0x{
+  text-align:center;
+  color:Green;
+  font-size:24px;
+}
+button{
+  text-align:center;
+  float:center;
+  height:50px;
+  width:100px;
+  position:relative;
+  font-size:17px;
+  background-image:url('/img/pozadina.jpg');
+  background-repeat:repeat-xy;
+  background-size:0.05;
+  border-color:green;
+  color:white;
+}
+.response{
+  color:black;
+  opacity:0.8;
+  font-size:20;
+}
+.sentplane{
+  text-align:center;
+  height:200px;
+  width:auto;
+
+}
+/** popup **/
+.thanks div{
+  display:inline-block;
+  width:24%;
+  text-align:center;
+}
+.thanks img{
+  width:200px;
+  height:auto;
+}
+.thanks h2{
+  text-align:center;
+}
+
+/** footer **/
+.footer{
+    height:60px;
+    position:relative;
+    background-color:white;
+    bottom:0px;
+    padding-bottom:0px;
+    margin-bottom:0px;
+    width:100%;
+    left:0;
+    box-shadow: 0px -2px 5px 0px black;
+}
+.footertext{
+  margin:0px;
+  float:right;
+  padding-top:20px;
+  padding-right:10px;
+}
+.footer > a{
+width:50px;
+height:auto;
+position:relative;
+margin:0 auto;
+display:block;
+height:auto;
+width:50px;
+text-align:center;
+}
+.gitlogo{
+  width:50px;
+  height:auto;
+  padding-top:5px;
+}
+.netlogo{
+  width:50px;
+  height:auto;
+  padding-top:5px;
+  float:right;
+  padding-right:200px;
+}

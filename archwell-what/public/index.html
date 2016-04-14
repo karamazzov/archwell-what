@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html ng-app="ourApp">
+<head>
+  <title>We're back baby</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script><!-- load angular -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><!-- load jquery -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script><!-- load ui-router-->
+   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script><!-- load angularanimationz-->
+   <script src="core.js"></script>
+   <link href='https://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
+   <link href="/stylesheets/style.css" type="text/css" rel="stylesheet"></script>
+</head>
+
+<body ng-app="animateApp">
+  <div class="header">   <!-- header -->
+    <a class='logolink' href="#"><img class='logotop' src='img/logo.png'></img></a>
+  </div>
+  <div class="bigpic">
+    <div class="widepic"></div>
+    <div class="hello">
+          <span class="welcometext"> Welcome to </span>
+          <span class="green"> Archwell </span>
+      </div></div>
+  <div class="cvpart">
+    <p class="cvbanner">About us</p>
+    <h2> Then I saw a great white throne and him who was seated on it. The earth and the heavens fled from his presence, and there was no place for them.</h2>
+    <div class="col">
+      <img class="cvimg" src="/img/perica.jpg"></img>
+      <h2> Petar Matko </h2>
+      <h3> "Data>>shifter>>" </h3>
+      <img class="logopic" src="/img/db.png"></img>
+      <p> Behold, I am coming quickly, and My reward is with Me, to render to every man according to what he has done. </p>
+      </div>
+    <div class="col">
+      <img class="cvimg" src="/img/architect.gif"></img>
+      <h2> Milan Velebit </h2>
+      <h3> "The Architect"</h3>
+      <img class="logopic" src="/img/zippouno.png"></img>
+      <p> I am the Alpha and the Omega, the first and the last, the beginning and the end. </p>
+    </div>
+    <div class="col">
+      <img class="cvimg" src="/img/fica.png"></img>
+      <h2> Filip Markovic </h2>
+      <h3> "The Enabler" </h3>
+      <img class="logopic" src="/img/work.png"></img>
+      <p> I am the Alpha and the Omega," says the Lord God, "who is, and who was, and who is to come, the Almighty. </p>
+    </div>
+  </div>
+
+  <div class="cvpart">
+    <p class="cvbanner">What we do</p>
+    <div class="col">
+      <img ui-sref="whatwedo1" class="cvimg" src="#" alt="slika 1"></img>
+    </div>
+    <div class="col">
+      <img  ui-sref="whatwedo2" class="cvimg" src="#" alt="slika 2"></img>
+    </div>
+    <div class="col">
+      <img  ui-sref="whatwedo1" class="cvimg" src="#" alt="slika 3"></img>
+    </div>
+  </div>
+
+  <div class="What we do display class">
+    <ui-view ="whatwedo"></ui-view> 
+  </div>
+
+  <button ng-model="collapsed2" ng-click="collapsed2=!collapsed2">Our portfolio</button>
+    <div ng-show="collapsed2">
+      Pera pro
+    </div>
+
+
+  <div class="contactform">
+   <button class="linkbtn" ui-sref="contact">Click here to contact us!</button>
+   <div ui-view="contact"></div>
+  </div>
+
+<div class="triangle rotate"  ng-model="collapsed" ng-click="collapsed=!collapsed"></div>
+<div class="thanks" ng-show="collapsed">
+  <h2> This website was built using:</h2>
+  <div>
+    <a href="https://angularjs.org/"><img src="/img/angular.png"></img></a>
+    <h2> AngularJS </h2>
+  </div>
+  <div>
+    <a href='https://nodejs.org'><img src="/img/nodejs.png"></img></a>
+    <h2> NodeJS </h2>
+  </div>
+  <div>
+    <a href="https://mongodb.org"><img src="/img/mongodb.png"></img></a>
+    <h2> MongoDB </h2>
+  </div>
+  <div>
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="/img/brain.png"></img></a>
+    <h2> Our magnificent minds </h2>
+  </div>
+</div>
+
+
+   <div class="footer">
+     <div class="footertext">
+     <span>&copy <script>
+      document.write(new Date().getFullYear())
+     </script> Archwell. All copyrights reserved. </span>
+   </div>
+    <!-- reservisano za network graph kad dignemo sajt --> <img ui-sref='unleashed' class="netlogo" src='/img/graphicon.png'></img>
+    <a href="https://github.com/TheEnabler/archwell-what" class="gitlink">
+    <img class="gitlogo" src="/img/gitlogo.png"></img> </a>
+   </div>
+
+
+</body>
+</html>
