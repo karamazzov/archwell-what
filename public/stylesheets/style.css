@@ -116,6 +116,16 @@ position:relative;
     height:300px;
     width:300px;
 }
+.wwdo{
+  height:350px;
+  width:350px;
+  border-radius: 20px;
+  }
+.portfolio_btn{
+  margin-left:0px;
+  margin-right:0px;
+
+}
 .col{
     float:left;
     width:33%;
