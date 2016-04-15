@@ -3,6 +3,12 @@ body {
   margin:0;
   font-family: 'Titillium Web', sans-serif;
 }
+.njuz{
+  position:center;
+  padding-left:100px;
+  padding-right:100px;
+  text-align: center;
+}
 
 /** angular stajl **/
 input.ng-invalid{border:1px solid red;}
@@ -83,7 +89,7 @@ position:relative;
 }
 /**CV part **/
 .cvpart{
-    position:relative;
+    position:relative;;
     padding-top:10px;
     height:500px;
     text-align:center;
@@ -111,20 +117,28 @@ position:relative;
     color:green;
     text-align:center;
     margin:0;
+    margin-bottom:20px;
 }
 .cvimg{
     height:300px;
     width:300px;
+}
+/** What we do part **/
+.whatwedoclass{
+  position:relative;
+  padding-bottom:10px;
 }
 .wwdo{
   height:350px;
   width:350px;
   border-radius: 20px;
   }
-.portfolio_btn{
-  margin-left:0px;
-  margin-right:0px;
 
+.sofdev{
+  text-align:center;
+  margin-left:70px;
+  margin-right:70px;
+  font-size:19px;
 }
 .col{
     float:left;

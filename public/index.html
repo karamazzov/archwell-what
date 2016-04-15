@@ -47,27 +47,19 @@
     </div>
   </div>
 
-  <div class="cvpart">
+  <div class="whatwedoclass">
     <p class="cvbanner">What we do</p>
     <div class="col">
-      <img ui-sref="whatwedo1" class="wwdo" src="img/archwell.gif" alt="slika 1"></img>
+      <a ui-sref="whatwedo1"><img class="wwdo" src="img/archwell.gif" alt="slika 1"></img></a>
     </div>
     <div class="col">
-      <img  ui-sref="whatwedo2" class="wwdo" src="img/databaza.gif" alt="slika 2"></img>
+      <a ui-sref="whatwedo2"><img class="wwdo" src="img/databaza.gif" alt="slika 2"></img></a>
     </div>
     <div class="col">
-      <img  ui-sref="whatwedo1" class="wwdo" src="img/ai.gif" alt="slika 3"></img>
+      <a ui-sref="whatwedo3"><img class="wwdo" src="img/ai.gif" alt="slika 3"></img></a>
     </div>
-  </div>
-
-  <div class="What we do display class">
     <ui-view ="whatwedo"></ui-view>
   </div>
-
-  <button class="portfolio_btn" ng-model="collapsed2" ng-click="collapsed2=!collapsed2">Our portfolio</button>
-    <div ng-show="collapsed2">
-      Pera pro
-    </div>
 
 
   <div class="contactform">
