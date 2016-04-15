@@ -11,15 +11,7 @@ ourApp.config([  //quite self-explanatory
         templateUrl: 'home.html', // ovo home.html je zapravo id script taga koji nosi template
         controller: 'mainController'
       })  // izbrisati ovo?
-      .state('contact', {
-        views: {
-          'contact': {
-            url: '/contact',
-            templateUrl: 'contact.html',
-            controller: 'contactController'
-          }
-        }
-      })
+      
       .state('whatwedo1', {
         url: '/whatwedo1',
         templateUrl: 'whatwedo1.html'

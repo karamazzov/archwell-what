@@ -63,12 +63,47 @@
 
 
   <div class="contactform">
-   <button class="linkbtn" ui-sref="contact">Click here to contact us!</button>
-   <div ui-view="contact"></div>
+  <button class="linkbtn" ng-model="collapsedc" ng-click="collapsedc=!collapsedc">Click here to contact us!</button>
+   <div ng-show="collapsedc">
+
+     <p class="pl0x"> Please insert the following:</p>
+
+ <form action="/mail" name="contactform" method="post" validation ng-submit="addMsg()" class="contactform">
+   <!-- ime -->
+   <div class="row">
+     <input type="text" name="name" ng-model="user.name" placeholder="Your full name"
+     required />
+     <span class="formerror" ng-show="contactform.name.$error.required">Your name and surname are required </span>
+   </div>
+   <!--email -->
+   <div class="row">
+     <input type="email" name="email" ng-model="user.email" placeholder="Your email"
+     data-ng-minlength="6" required />
+     <span class="formerror" ng-show="contactform.email.$error.required"> Your email address is required </span>
+     <span class="formerror" ng-show="contactform.email.$error.email"> That's not an email address. </span>
+   </div>
+   <!-- poruka -->
+   <div class="row">
+     <textarea class="message" name="content" id="message" ng-model="user.message" ng-show="contactform.email.$valid" placeholder="Please type in your message"
+     data-ng-minlength="4"></textarea>
+   </div>
+   <div class="row">
+    <button class="button_contact" type="submit" ng-disabled="contactform.$invalid" ng-click="ShowThanks()"> Reach us! </button>
+  </div>
+  <div class="row">
+ <!-- mesto za response, don't touch -->
   </div>
 
-<div class="triangle rotate"  ng-model="collapsed" ng-click="collapsed=!collapsed"></div>
-<div class="thanks" ng-show="collapsed">
+  <div ng-show="ThankYou">
+    <h2> Your message has been sent, {{user.name}} </h2>
+    <img class="sentplane" src="/img/sent.png"></img>
+  </div>
+ </form>
+</div>
+  </div>
+
+<div class="triangle rotate"  ng-model="collapsedt" ng-click="collapsedt=!collapsedt"></div>
+<div class="thanks" ng-show="collapsedt">
   <h2> This website was built using:</h2>
   <div>
     <a href="https://angularjs.org/"><img src="/img/angular.png"></img></a>
