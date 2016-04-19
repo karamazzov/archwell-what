@@ -4,6 +4,9 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var passport = require('passport');
+var flash    = require('connect-flash');
+var session = require('express-session');
 
 var app = express();
 
@@ -11,6 +14,8 @@ var mongoose = require('mongoose');
 var Mail = require('./public/admin/models/mail');
 
 var db = 'mongodb://localhost/contact';
+
+require('./config/passport')(passport); //MEINE CONFIGMEISTER
 
 mongoose.connect(db);
 
@@ -24,11 +29,58 @@ app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '/public')));
+
+app.use(session({ secret: 'ilovearchwellyarchwellarchwellyarchwell'}));
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(flash());
 /*
 
 app.use('/', routes);
 app.use('/users', users);
 */
+
+
+app.get('/adminy/', function(req, res) {
+        res.render('admin.jade'); // load the admin.jade
+    });
+
+app.get('/admin/login', function(req, res) {
+
+           // render the page and pass in any flash data if it exists
+        res.render('login.jade', { message: req.flash('loginMessage') });
+   });
+
+app.post('/admin/login', passport.authenticate('local-login', {
+    successRedirect : '/admin/profile', // redirect to the secure profile section
+    failureRedirect : '/admin/login', // redirect back to the signup page if there is an error
+    failureFlash : true // allow flash messages
+}));
+
+
+app.get('/admin/profile/', isLoggedIn, function(req, res) {
+        res.render('profile.jade', {
+             admin : req.admin // get the user out of session and pass to template
+         });
+  });
+
+app.get('/admin/logout/', function(req, res) {
+          req.logout();
+          res.redirect('/');
+      });
+
+function isLoggedIn(req, res, next) {
+
+          // if user is authenticated in the session, carry on
+          if (req.isAuthenticated())
+              return next();
+
+          // if they aren't redirect them to the home page
+          res.redirect('/');
+}
+
+
+
 
 // API BRUH
 app.get('/mails', function(req, res){

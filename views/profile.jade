@@ -1,0 +1,25 @@
+extends layout
+block content
+
+  div(class='container')
+
+    div(class='page-header text-center')
+        h1 Profile Page
+          span(class='fa fa-anchor')
+        a(href='/admin/logout', class='btn btn-default btn-sm') Logout
+    
+
+    div(class='row')
+
+        div(class='col-sm-6')
+            div(class='well')
+                h3 Local
+                  span(class='fa fa-user')
+
+                p
+                  strong id  #{user._id}
+                  br
+                  strong email #{user.local.email} 
+                  br
+                  strong password #{user.local.password}
+                  br
