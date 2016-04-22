@@ -37,6 +37,7 @@ position:relative;
 .name, .content , .email{
   float:left;
   width:33%;
-  test-align:center;
+  text-align:center;
+
 }
 .

@@ -10,19 +10,28 @@
 <div ng-app="myApp" ng-controller="mailsCtrl">
 <div class="messageboard">
   <p class="adminnote"> Messages : </p>
+  <div class="name">
+    <p> Name: </p>
+  </div>
+  <div class="email">
+    <p> Email: </p>
+  </div>
+  <div class="content">
+    <p> Message: </p>
+  </div>
   <div ng-repeat="mail in mails">
     <div class="name">
       <hr>
     <p>{{ mail.name}} </p>
-  </div>
-  <div class="email">
-    <hr>
-    <p>{{ mail.email}} </p>
-  </div>
-  <div class="content">
-    <hr>
-    <p>{{ mail.content}} </p>
-  </div>
+    </div>
+    <div class="email">
+      <hr>
+      <p>{{ mail.email}} </p>
+    </div>
+    <div class="content">
+      <hr>
+      <p>{{ mail.content}} </p>
+    </div>
   </div>
 </div>
 
