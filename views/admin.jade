@@ -1,12 +1,28 @@
-extends layout
-block content
-  div(class='container')
-    div(class='jumbotron text-center')
-      h1
-        span(class='fa fa-lock') Node Authentication
-
-      p Login with:
-
-      a(href='/admin/login', class='btn btn-default') Local sing in
-      span(class='fa fa-user')
-        
+doctype html
+html
+  script(src='http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js')
+  script(src='core.js')
+  link(href='/stylesheets/admstyle.css', type='text/css', rel='stylesheet')
+  body
+    .adminheader
+      a.logolink(href='#')
+        img.logotop(src='/img/logo.png')
+    div(ng-app='myApp', ng-controller='mailsCtrl')
+      .messageboard
+        p.adminnote  Messages : 
+        .name
+          p  Name: 
+        .email
+          p  Email: 
+        .content
+          p  Message: 
+        div(ng-repeat='mail in mails')
+          .name
+            hr
+            p {{ mail.name}} 
+          .email
+            hr
+            p {{ mail.email}} 
+          .content
+            hr
+            p {{ mail.content}} 

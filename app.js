@@ -34,15 +34,17 @@ app.use(session({ secret: 'ilovearchwellyarchwellarchwellyarchwell'}));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
-/*
 
+
+/*
 app.use('/', routes);
 app.use('/users', users);
 */
 
 
-app.get('/adminy/', function(req, res) {
+app.get('/admin/', isLoggedIn, function(req, res) {
         res.render('admin.jade'); // load the admin.jade
+
     });
 
 app.get('/admin/login', function(req, res) {
@@ -56,7 +58,6 @@ app.post('/admin/login', passport.authenticate('local-login', {
     failureRedirect : '/admin/login', // redirect back to the signup page if there is an error
     failureFlash : true // allow flash messages
 }));
-
 
 app.get('/admin/profile/', isLoggedIn, function(req, res) {
         res.render('profile.jade', {
@@ -79,11 +80,8 @@ function isLoggedIn(req, res, next) {
           res.redirect('/');
 }
 
-
-
-
 // API BRUH
-app.get('/mails', function(req, res){
+app.get('/mails', isLoggedIn, function(req, res){
   Mail.find()
   .exec(function(err, mails) {
     if(err) {
@@ -95,7 +93,7 @@ app.get('/mails', function(req, res){
   })
 });
 
-app.post('/mail', function(req, res){
+app.post('/mail', isLoggedIn, function(req, res){
   var newMail = new Mail();
 
   newMail.name = req.body.name;
