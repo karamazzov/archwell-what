@@ -52,7 +52,7 @@ app.get('/admin/login', function(req, res) {
    });
 
 app.post('/admin/login', passport.authenticate('local-login', {
-    successRedirect : '/admin/profile', // redirect to the secure profile section
+    successRedirect : '/admin/', // redirect to the secure profile section
     failureRedirect : '/admin/login', // redirect back to the signup page if there is an error
     failureFlash : true // allow flash messages
 }));
