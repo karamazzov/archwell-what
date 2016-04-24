@@ -13,7 +13,7 @@ var app = express();
 var mongoose = require('mongoose');
 var Mail = require('./public/admin/models/mail');
 
-var db = 'mongodb://localhost/contact';
+var db = 'mongodb://localhost/archwell';
 
 require('./config/passport')(passport); //MEINE CONFIGMEISTER
 
