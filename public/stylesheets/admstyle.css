@@ -1,0 +1,43 @@
+body {
+  margin:0;
+  font-family: 'Titillium Web', sans-serif;
+}
+.adminheader{
+     top:0px;
+     width:100%;
+     position:relative;
+     color:white;
+     height:50px;
+     left:0px;
+     padding:0px auto;
+     box-shadow: 0px 2px 25px 0px green;
+}
+.messageboard{
+  width:100%;
+
+}
+.adminnote{
+  font-size:20px;
+  text-align:center;
+}
+.logotop{
+    height:60px;
+    width:auto;
+}
+.logolink{
+ text-align:center;
+width:60px;
+height:auto;
+top:0px;
+padding-top:0px;
+display:block;
+margin: 0 auto;
+position:relative;
+}
+.name, .content , .email{
+  float:left;
+  width:33%;
+  text-align:center;
+
+}
+.
